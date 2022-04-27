@@ -11,10 +11,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import pages.LoginPage;
 
-public class LoginDemoSteps {
-	/*
+public class LoginDemoSteps_POM {
 	WebDriver driver = null;
+	LoginPage login = null;
 	
 	@Given("^browser is open$")
 	public void browser_is_open() {
@@ -33,23 +34,29 @@ public class LoginDemoSteps {
 
 	@When("^user enters (.*) and (.*)$")
 	public void user_enters_username_and_password(String username, String password) {
-		driver.findElement(By.id("name")).sendKeys(username);
-		driver.findElement(By.id("password")).sendKeys(password);
+		
+		login = new LoginPage(driver);
+		login.enterUsername(username);
+		login.enterPassword(password);
+		//driver.findElement(By.id("name")).sendKeys(username);
+		//driver.findElement(By.id("password")).sendKeys(password);
 	    
 	}
 
 	@And("^user clicks on login$")
 	public void user_clicks_on_login() {
-		driver.findElement(By.id("login")).click();
+		login.clickLogin();
+		//driver.findElement(By.id("login")).click();
 	    
 	}
 
 	@Then("^user is navigated to the home page$")
 	public void user_is_navigated_to_the_home_page() {
-		driver.findElement(By.id("logout")).isDisplayed();
+		login.checkLogoutIsDisplayed();
+		//driver.findElement(By.id("logout")).isDisplayed();
 		driver.close();
 		driver.quit();
 	}
-*/
+
 
 }
