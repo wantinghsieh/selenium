@@ -1,3 +1,17 @@
 debug by using TestRunner class
 Then we could use debugger to step ..
 debug as junit test
+
+
+step 1: feature file [/CucumberJava/src/test/resources/Features/LoginResAccount.feature]
+
+step 2: pagefactory [/CucumberJava/src/test/java/pagefactory/LoginPageResAccount.java]
+
+step 3: StepDefinitions [/CucumberJava/src/test/java/StepDefinitions/LoginResAccountSteps.java]
+
+step 4: test runner [/CucumberJava/src/test/java/StepDefinitions/TestRunnerLoginResAccount.java]
+
+
+Question: 
+make sure page loaded
+select menu item
